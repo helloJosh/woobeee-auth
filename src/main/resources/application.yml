@@ -1,0 +1,31 @@
+logging:
+  level:
+    root: debug
+
+spring:
+  lifecycle:
+    timeout-per-shutdown-phase: 30s
+  application:
+    name: woobeee-auth
+
+  jwt:
+    secret: aaaasqwlkljlfasdfqwerafcxvzpojijoijopjewndllllllsserrrrrrwqexc
+
+  profiles:
+    active: dev
+
+management:
+  endpoint:
+    pause:
+      enabled: true
+    resume:
+      enabled: true
+    restart:
+      enabled: true
+
+
+server:
+  shutdown: graceful
+  port: 8090
+  netty:
+    connection-timeout: 30s
