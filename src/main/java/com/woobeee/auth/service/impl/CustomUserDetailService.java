@@ -21,13 +21,13 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @RequiredArgsConstructor
 public class CustomUserDetailService implements UserDetailsService {
-	private final LoginRequest loginRequest;
+	//private final LoginRequest loginRequest;
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		Response<MemberAuthResponse> response = null;
 		try {
-			response = loginRequest.memberLogin(new MemberAuthRequest(username));
+			//response = loginRequest.memberLogin(new MemberAuthRequest(username));
 		} catch (Exception e) {
 			throw new UsernameNotFoundException("유저 아이디를 찾을 수 없습니다");
 		}
