@@ -26,6 +26,6 @@ management:
 
 server:
   shutdown: graceful
-  port: 8090
+  port: 8082
   netty:
     connection-timeout: 30s
